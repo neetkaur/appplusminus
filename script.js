@@ -5,6 +5,8 @@ let incrementvalue = parseInt(document.getElementById('increment').value)
 function doAdd(){
   updatedvalue = originalvalue+incrementvalue
   originalvalue = updatedvalue
+  if(originalvalue>=0){
+    document.getElementById('finalnumber').style.color = "black"}
   document.getElementById('finalnumber').innerHTML = updatedvalue
 }
 
@@ -12,8 +14,7 @@ function doSubtract(){
   updatedvalue = originalvalue-incrementvalue
   originalvalue = updatedvalue
   document.getElementById('finalnumber').innerHTML = updatedvalue
-  if(updatedvalue<0){
-
+  if(originalvalue<0){
     document.getElementById('finalnumber').style.color = "red"}
 }
 
